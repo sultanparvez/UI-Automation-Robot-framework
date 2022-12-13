@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${username}             rahulshettyacademy
 ${invalidPassword}      463216
+${validpassword}        learning
 ${url}                  https://rahulshettyacademy.com/loginpagePractise/
 *** Keywords ***
 open the browser with the Mortage payment url
