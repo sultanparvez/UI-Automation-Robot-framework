@@ -14,7 +14,7 @@ Validate Unsucessful Login
 
 *** Keywords ***
 open the browser with the Mortage payment url
-    Create Webdriver    Chrome  executable_path=G:\Automation_Bro\ROBOT\UI-Automation-Robot-framework\Drivers\chromedriver
+    Create Webdriver    Chrome  executable_path=../Drivers/chromedriver
     Go To    https://rahulshettyacademy.com/loginpagePractise/
 Fill the login Form
     Input Text    id:username   rahulshettyacademy

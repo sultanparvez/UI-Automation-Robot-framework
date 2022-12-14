@@ -1,0 +1,7 @@
+datasources:8e4ed3b8144407d7d4b95226c507c9bf40fc3885
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:7fad6ca6c25de90b0a0034375b9e62386c039906
+--test UI Test.Validate UnSuccesful Login
+--test UI Test.Veify the end to end ecommerce Product purchase process
+--test UI Test.Verify user is able to fillup the login form

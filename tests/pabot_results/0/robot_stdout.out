@@ -1,0 +1,9 @@
+==============================================================================
+UI Test :: To validate the Login form                                         
+==============================================================================
+Validate UnSuccesful Login                                            | PASS |
+------------------------------------------------------------------------------
+UI Test :: To validate the Login form                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\UI-Automation-Robot-framework\tests\pabot_results\0\output.xml
