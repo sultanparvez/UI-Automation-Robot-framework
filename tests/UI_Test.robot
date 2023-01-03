@@ -15,7 +15,7 @@ Resource        ../PO/ConfirmationPage.robot
 
 
 *** Variables ***
-@{listofProducts}           iphone X      Nokia Edge
+@{listofProducts}           Samsung Note 8     Nokia Edge
 ${country_name}             Bangladesh
 
 
