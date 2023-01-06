@@ -2,22 +2,20 @@
 Documentation   To validate the Login form
 Library         SeleniumLibrary
 Library         Collections
-Library         /customLibraries/Shop.py
+Library         ../customLibraries/Shop.py
 Test Setup      open the browser with the url
 Suite Setup
 Suite Teardown
 Test Teardown   Close Browser session
-Resource        /PageObject/Generic.robot
-Resource        /PageObject/LandingPage.robot
-Resource        /PageObject/ShopPage.robot
-Resource        /PageObject/CheckoutPage.robot
-Resource        /PageObject/ConfirmationPage.robot
-
+Resource        ../PageObject/Generic.robot
+Resource        ../PageObject/LandingPage.robot
+Resource        ../PageObject/ShopPage.robot
+Resource        ../PageObject/CheckoutPage.robot
+Resource        ../PageObject/ConfirmationPage.robot
 
 *** Variables ***
 @{listofProducts}           Samsung Note 8     Nokia Edge
 ${country_name}             Bangladesh
-
 
 *** Test Cases ***
 Validate UnSuccesful Login
