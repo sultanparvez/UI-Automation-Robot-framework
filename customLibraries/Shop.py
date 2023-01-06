@@ -8,9 +8,9 @@ class Shop:
     def __init__(self):
         self.selLib = BuiltIn().get_library_instance("SeleniumLibrary")
 
-    @keyword
-    def hello_world(self):
-        print("hello")
+    # @keyword
+    # def hello_world(self):
+    #     print("hello")
 
     @keyword
     def add_items_to_cart_and_checkout(self, productsList):

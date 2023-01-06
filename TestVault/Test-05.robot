@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation   To validate the Login form
 Library     SeleniumLibrary
-Library     DataDriver      file=resources/data.csv     encoding=utf_8   dialect=unix
+Library     DataDriver      file=Data/data.csv     encoding=utf_8   dialect=unix
 Test Teardown   Close Browser
 Test Template   Validate UnSuccesful Login
 

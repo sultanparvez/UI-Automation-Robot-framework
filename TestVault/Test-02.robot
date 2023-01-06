@@ -4,7 +4,7 @@ Library         SeleniumLibrary
 Library         Collections
 Test Setup      open the browser with the Mortage payment url
 Test Teardown   Close Browser Session
-Resource        ../PO/resource.robot
+Resource        ../PageObject/resource.robot
 *** Variables ***
 ${error_message_login}      css:.alert-danger
 ${shop_page_load}           css:.nav-link

@@ -1,258 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230102 16:00:03.177" rpa="false" schemaversion="3">
-<suite id="s1" name="UI Test" source="C:\UI-Automation-Robot-framework\tests\UI_Test.robot">
-<test id="s1-t1" name="Veify the end to end ecommerce Product purchase process" line="31">
-<kw name="open the browser with the url" library="Generic" type="SETUP">
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<arg>${browser_name}</arg>
-<arg>executable_path=resources/${browser_name}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20230102 16:00:03.454" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20230102 16:00:03.454" endtime="20230102 16:00:04.696"/>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230106 14:09:40.805" rpa="false" schemaversion="3">
+<suite id="s1" name="UI Test" source="C:\UI-Automation-Robot-framework\UI_Test.robot">
+<test id="s1-t1" name="Validate UnSuccesful Login" line="23">
+<kw name="open the browser with the url" type="SETUP">
+<msg timestamp="20230106 14:09:41.089" level="FAIL">No keyword with name 'open the browser with the url' found.</msg>
+<status status="FAIL" starttime="20230106 14:09:41.089" endtime="20230106 14:09:41.089"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230102 16:00:04.697" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<status status="PASS" starttime="20230102 16:00:04.697" endtime="20230102 16:00:05.397"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:03.454" endtime="20230102 16:00:05.398"/>
-</kw>
-<kw name="Fill the login Form" library="LandingPage">
-<arg>${user_name}</arg>
-<arg>${valid_password}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:username</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:05.399" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
-<status status="PASS" starttime="20230102 16:00:05.398" endtime="20230102 16:00:05.490"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id:password</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:05.490" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20230102 16:00:05.529" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230102 16:00:05.563" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230102 16:00:05.490" endtime="20230102 16:00:05.563"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>signInBtn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:05.564" level="INFO">Clicking button 'signInBtn'.</msg>
-<status status="PASS" starttime="20230102 16:00:05.563" endtime="20230102 16:00:05.612"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:05.398" endtime="20230102 16:00:05.612"/>
-</kw>
-<kw name="wait until Element is located in the page" library="ShopPage">
-<kw name="Wait Until element passed is located on Page" library="Generic">
-<arg>${Shop_page_load}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${page_locator}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230102 16:00:05.613" endtime="20230102 16:00:09.002"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:05.613" endtime="20230102 16:00:09.003"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:05.613" endtime="20230102 16:00:09.003"/>
-</kw>
-<kw name="Verify Card titles in the Shop page" library="ShopPage">
-<kw name="Create List" library="BuiltIn">
-<var>@{expectedList}</var>
-<arg>iphone X</arg>
-<arg>Samsung Note 8</arg>
-<arg>Nokia Edge</arg>
-<arg>Blackberry</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20230102 16:00:09.003" level="INFO">@{expectedList} = [ iphone X | Samsung Note 8 | Nokia Edge | Blackberry ]</msg>
-<status status="PASS" starttime="20230102 16:00:09.003" endtime="20230102 16:00:09.003"/>
-</kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>${elements}</var>
-<arg>css:.card-title</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20230102 16:00:09.013" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="57ea3675894f36b404d06b2b0eb78ae9", element="5b483fb2-50a6-444d-a077-c1cddd680585")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20230102 16:00:09.004" endtime="20230102 16:00:09.013"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{actualList}</var>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20230102 16:00:09.014" level="INFO">@{actualList} = [ ]</msg>
-<status status="PASS" starttime="20230102 16:00:09.014" endtime="20230102 16:00:09.014"/>
-</kw>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{elements}</value>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ea3675894f36b404d06b2b0eb78ae9", element="5b483fb2-50a6-444d-a077-c1cddd680585")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230102 16:00:09.029" level="INFO">iphone X</msg>
-<status status="PASS" starttime="20230102 16:00:09.015" endtime="20230102 16:00:09.029"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230102 16:00:09.029" endtime="20230102 16:00:09.037"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.015" endtime="20230102 16:00:09.037"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ea3675894f36b404d06b2b0eb78ae9", element="2dd6d552-d51a-439d-989d-8de9cab60e9d")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230102 16:00:09.047" level="INFO">Samsung Note 8</msg>
-<status status="PASS" starttime="20230102 16:00:09.037" endtime="20230102 16:00:09.047"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230102 16:00:09.048" endtime="20230102 16:00:09.054"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.037" endtime="20230102 16:00:09.054"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ea3675894f36b404d06b2b0eb78ae9", element="4a05c20c-bd11-411b-a3a3-5dc0bdcd4033")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230102 16:00:09.067" level="INFO">Nokia Edge</msg>
-<status status="PASS" starttime="20230102 16:00:09.056" endtime="20230102 16:00:09.068"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230102 16:00:09.068" endtime="20230102 16:00:09.075"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.056" endtime="20230102 16:00:09.075"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ea3675894f36b404d06b2b0eb78ae9", element="958433b8-a3cd-474d-94b4-043a4fdf51b2")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${element.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230102 16:00:09.087" level="INFO">Blackberry</msg>
-<status status="PASS" starttime="20230102 16:00:09.075" endtime="20230102 16:00:09.087"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${actualList}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230102 16:00:09.087" endtime="20230102 16:00:09.094"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.075" endtime="20230102 16:00:09.094"/>
-</iter>
-<status status="PASS" starttime="20230102 16:00:09.014" endtime="20230102 16:00:09.095"/>
-</for>
-<kw name="Lists Should Be Equal" library="Collections">
-<arg>${expectedList}</arg>
-<arg>${actualList}</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" starttime="20230102 16:00:09.095" endtime="20230102 16:00:09.095"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.003" endtime="20230102 16:00:09.095"/>
-</kw>
-<kw name="Add Items To Cart And Checkout" library="Shop">
-<arg>${listofProducts}</arg>
-<msg timestamp="20230102 16:00:09.113" level="INFO">Clicking button 'xpath:(//*[@class='card-footer'])[2]/button'.</msg>
-<msg timestamp="20230102 16:00:09.170" level="INFO">Clicking button 'xpath:(//*[@class='card-footer'])[3]/button'.</msg>
-<msg timestamp="20230102 16:00:09.228" level="INFO">Clicking link 'css:li.active a'.</msg>
-<status status="PASS" starttime="20230102 16:00:09.095" endtime="20230102 16:00:09.285"/>
-</kw>
-<kw name="Verify items in the Checkout Page and proceed" library="CheckoutPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css:.btn-success</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:09.286" level="INFO">Clicking element 'css:.btn-success'.</msg>
-<status status="PASS" starttime="20230102 16:00:09.285" endtime="20230102 16:00:09.344"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.285" endtime="20230102 16:00:09.345"/>
-</kw>
-<kw name="Enter the Country and select the terms" library="ConfirmationPage">
-<arg>${country_name}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>country</arg>
-<arg>${country_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:09.346" level="INFO">Typing text 'Bangladesh' into text field 'country'.</msg>
-<status status="PASS" starttime="20230102 16:00:09.346" endtime="20230102 16:00:09.431"/>
-</kw>
-<kw name="Wait Until element passed is located on Page" library="Generic">
-<arg>//a[text()='${country_name}']</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${page_locator}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230102 16:00:09.431" endtime="20230102 16:00:14.532"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.431" endtime="20230102 16:00:14.533"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[text()='${country_name}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:14.534" level="INFO">Clicking element '//a[text()='Bangladesh']'.</msg>
-<status status="PASS" starttime="20230102 16:00:14.533" endtime="20230102 16:00:14.572"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230102 16:00:16.574" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230102 16:00:14.573" endtime="20230102 16:00:16.574"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css:.checkbox label</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:16.576" level="INFO">Clicking element 'css:.checkbox label'.</msg>
-<status status="PASS" starttime="20230102 16:00:16.575" endtime="20230102 16:00:16.636"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:09.346" endtime="20230102 16:00:16.637"/>
-</kw>
-<kw name="Purchase the Product and Confirm the Purchase" library="ConfirmationPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>css:.btn-success</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230102 16:00:16.638" level="INFO">Clicking button 'css:.btn-success'.</msg>
-<status status="PASS" starttime="20230102 16:00:16.637" endtime="20230102 16:00:16.690"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Success!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230102 16:00:16.709" level="INFO">Current page contains text 'Success!'.</msg>
-<status status="PASS" starttime="20230102 16:00:16.691" endtime="20230102 16:00:16.709"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:16.637" endtime="20230102 16:00:16.709"/>
-</kw>
-<kw name="Close Browser session" library="Generic" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230102 16:00:16.710" endtime="20230102 16:00:18.857"/>
-</kw>
-<status status="PASS" starttime="20230102 16:00:16.710" endtime="20230102 16:00:18.858"/>
+<kw name="Close Browser session" type="TEARDOWN">
+<msg timestamp="20230106 14:09:41.093" level="FAIL">No keyword with name 'Close Browser session' found. Did you try using keyword 'SeleniumLibrary.Close Browser' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20230106 14:09:41.093" endtime="20230106 14:09:41.094">No keyword with name 'Close Browser session' found. Did you try using keyword 'SeleniumLibrary.Close Browser' and forgot to use enough whitespace between keyword and arguments?</status>
 </kw>
 <tag>REGRESSION</tag>
-<status status="PASS" starttime="20230102 16:00:03.452" endtime="20230102 16:00:18.858"/>
+<tag>SMOKE</tag>
+<status status="FAIL" starttime="20230106 14:09:41.085" endtime="20230106 14:09:41.094">Setup failed:
+No keyword with name 'open the browser with the url' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser session' found. Did you try using keyword 'SeleniumLibrary.Close Browser' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
 <doc>To validate the Login form</doc>
-<status status="PASS" starttime="20230102 16:00:03.179" endtime="20230102 16:00:18.859"/>
+<status status="FAIL" starttime="20230106 14:09:40.807" endtime="20230106 14:09:41.095"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">REGRESSION</stat>
+<stat pass="0" fail="1" skip="0">REGRESSION</stat>
+<stat pass="0" fail="1" skip="0">SMOKE</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="UI Test">UI Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="UI Test">UI Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230106 14:09:41.079" level="ERROR">Error in file 'C:\UI-Automation-Robot-framework\UI_Test.robot' on line 5: Library '\customLibraries\Shop.py' does not exist.</msg>
+<msg timestamp="20230106 14:09:41.081" level="ERROR">Error in file 'C:\UI-Automation-Robot-framework\UI_Test.robot' on line 10: Resource file '\PageObject\Generic.robot' does not exist.</msg>
+<msg timestamp="20230106 14:09:41.082" level="ERROR">Error in file 'C:\UI-Automation-Robot-framework\UI_Test.robot' on line 11: Resource file '\PageObject\LandingPage.robot' does not exist.</msg>
+<msg timestamp="20230106 14:09:41.083" level="ERROR">Error in file 'C:\UI-Automation-Robot-framework\UI_Test.robot' on line 12: Resource file '\PageObject\ShopPage.robot' does not exist.</msg>
+<msg timestamp="20230106 14:09:41.083" level="ERROR">Error in file 'C:\UI-Automation-Robot-framework\UI_Test.robot' on line 13: Resource file '\PageObject\CheckoutPage.robot' does not exist.</msg>
+<msg timestamp="20230106 14:09:41.084" level="ERROR">Error in file 'C:\UI-Automation-Robot-framework\UI_Test.robot' on line 14: Resource file '\PageObject\ConfirmationPage.robot' does not exist.</msg>
 </errors>
 </robot>
